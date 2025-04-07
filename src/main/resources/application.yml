@@ -1,8 +1,25 @@
-mcp:
-  client:
-    stdio:
-      #          servers-configuration: classpath:./mcp-servers-config.json
-      connections:
-        spring-ai-playwright:
-          command: java
-          args: -jar,C:\\Users\\13716\\AI-coder\\playwright\\target\\playwright-0.0.1-SNAPSHOT.jar
+spring:
+  ai:
+    anthropic:
+      api-key: {"api-key"}
+      chat:
+        options:
+          model: claude-3-7-sonnet-latest
+
+#mcp:
+#  client:
+#    stdio:
+#      #          servers-configuration: classpath:./mcp-servers-config.json
+#      connections:
+#        spring-ai-playwright:
+#          command: java
+#          args: -jar,C:\\Users\\13716\\Git-AI\\playwright\\target\\playwright-0.0.1-SNAPSHOT.jar
+
+
+    mcp:
+      client:
+        stdio:
+          connections:
+            spring-ai-playwright:
+              command: java
+              args: -Dspring.ai.mcp.server.stdio=true,-jar,C:/Users/13716/Git-AI/playwright/target/playwright-0.0.1-SNAPSHOT.jar
