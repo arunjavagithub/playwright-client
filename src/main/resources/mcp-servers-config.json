@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "jetbrains": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@jetbrains/mcp-proxy"
+      ]
+    },
+    "spring-ai-playwright": {
+      "command": "java",
+      "args": [
+        "-Dspring.ai.mcp.server.stdio=true",
+        "-jar",
+        "C:/Users/13716/Git-AI/playwright/target/playwright-0.0.1-SNAPSHOT.jar"
+      ]
+    }
+  }
+}
